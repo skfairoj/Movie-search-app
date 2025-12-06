@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search</title>
+<link rel="stylesheet" href="style.css" />
+<script src="script.js"></script>
+
+
+</head>
+<body>
+  <div class="container">
+
+    <!-- Login Section -->
+    <div id="loginSection">
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="return login(event)">
+        <input type="text" id="username" placeholder="Enter Username" required /><br /><br />
+        <input type="password" id="password" placeholder="Enter Password" required /><br /><br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Movie Search Section -->
+    <div id="searchSection" style="display: none;">
+      <h2>Movie Search</h2>
+      <form id="searchForm" onsubmit="return searchMovies(event)">
+        <input type="text" id="searchInput" placeholder="Enter movie name" required />
+        <button type="submit">Search</button>
+      </form>
+      <div id="movieList"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

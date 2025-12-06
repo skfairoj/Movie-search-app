@@ -1,0 +1,145 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url("./bg.png") no-repeat center center/cover;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Login Section */
+#loginSection {
+  background: url("./login-bg.png") no-repeat center center/cover;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  margin: 15px auto;
+  position: relative;
+  color: #009f32;
+  overflow: hidden;
+}
+
+#loginSection::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Search Section */
+#searchSection {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  margin: 15px auto;
+  color: #13d5cb;
+}
+
+/* Headings */
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Form Inputs */
+form input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+form input::placeholder {
+  color: #ddd;
+}
+
+/* Buttons */
+form button {
+  width: 95%;
+  padding: 12px;
+  background: #ffa600f8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #e68900;
+}
+
+/* Search Form Button */
+#searchForm button {
+  width: auto;
+  padding: 12px 25px;
+  margin-left: 10px;
+  background: #d3c310;
+  color: #000;
+}
+
+#searchForm button:hover {
+  background: #ebb000da;
+}
+
+/* Movie Results */
+#movieList {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#movieList div {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#movieList img {
+  width: 60px;
+  height: auto;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  form input, form button {
+    font-size: 14px;
+  }
+
+  #movieList img {
+    width: 50px;
+  }
+}
